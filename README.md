@@ -18,6 +18,7 @@
 
 > [!IMPORTANT]
 > **本仓库（HouJia/subconverter）已归档。** 请在 **[HouJia/SubConverter-Extended](https://github.com/HouJia/SubConverter-Extended)** 继续迭代（默认分支 **`hjsmaster`**，自建开发 **`hjs-feature`**）。  
+> **文档索引**：[docs/00-请移步-SubConverter-Extended.md](docs/00-请移步-SubConverter-Extended.md) · Extended [功能与访问入口](https://github.com/HouJia/SubConverter-Extended/blob/hjsmaster/docs/功能与访问入口.md)  
 > **分支与同步**：见 Extended 仓库 `docs/技术方案-分支与上游同步.md`。
 
 ### HouJia 相对 Extended 的增量（摘要）

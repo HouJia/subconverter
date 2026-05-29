@@ -1,5 +1,10 @@
 # 技术迭代：subconverter — NAS 部署与 NPM `/subapi` 暴露
 
+> [!CAUTION]
+> **本文档已迁移。** 请以 **[HouJia/SubConverter-Extended](https://github.com/HouJia/SubConverter-Extended)** 仓库 `hjsmaster` 分支下的同名文件为准：  
+> `docs/技术迭代-NAS部署与NPM暴露.md`  
+> 功能说明见 Extended：`docs/功能与访问入口.md`。本文件仅作归档副本。
+
 > **本仓库职责**：subconverter 服务在 NAS 上监听、Docker 运行、API 路径约定。  
 > **基线（2026-05-28）**：`hjsmaster` 基于 **SubConverter-Extended**（含 mihomo bridge、HTML `/version` 页等）。  
 > **反代配置**：见 `nginx-proxy-manager` 仓库 `scripts/nas-qnap-npm-phase1-final.mjs`。  
@@ -52,7 +57,7 @@ subconverter 提供订阅转换 HTTP API，默认端口 **25500**。
 ```nginx
 # NPM → Proxy Host → Custom Locations → /subapi/
 location ^~ /subapi/ {
-    proxy_pass http://192.168.0.6:25500/;   # 末尾 / 表示剥掉 /subapi 前缀
+    proxy_pass http://<NAS-内网IP>:25500/;   # 末尾 / 表示剥掉 /subapi 前缀
     proxy_http_version 1.1;
     proxy_set_header Host $host;
     proxy_set_header X-Real-IP $remote_addr;
